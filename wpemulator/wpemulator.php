@@ -1,11 +1,12 @@
 <?php
-	/*
-		Plugin Name:       WP Emulator
-		Description:       Easily integrate an emulator into your WordPress site.
-		Version:           1.0
-		Author:            deeweb
-		Author URI:        https://deeweb.fr/
-		Text Domain:       wpemulator
+	/**
+		* Plugin Name: WP Emulator
+		* Description: Easily integrate an emulator into your WordPress site.
+		* Version: 1.0
+		* Author: deeweb
+		* Author URI: https://deeweb.fr/
+		*
+		* Text Domain: wpemulator
 	*/
 	
 	
