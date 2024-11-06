@@ -1,0 +1,80 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Emulator\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-06 05:22+0000\n"
+"PO-Revision-Date: 2024-11-06 05:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: Français\n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.11; wp-6.6.2\n"
+"X-Domain: wpemulator"
+
+#: wpemulator.php:108
+msgid "Action"
+msgstr "Action"
+
+#: wpemulator.php:69 wpemulator.php:206
+msgid "Aide"
+msgstr "Aide"
+
+#. Author of the plugin
+msgid "deeweb"
+msgstr ""
+
+#: wpemulator.php:68
+msgid "Envoyer un jeu"
+msgstr "Envoyer un jeu"
+
+#. Author URI of the plugin
+msgid "https://deeweb.fr/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Intégrez facilement un émulateur à votre site WordPress."
+msgstr "Intégrez facilement un émulateur à votre site WordPress."
+
+#: wpemulator.php:67 wpemulator.php:102
+msgid "Liste des jeux"
+msgstr "Liste des jeux"
+
+#: wpemulator.php:106
+msgid "Nom du jeu"
+msgstr "Nom du jeu"
+
+#: wpemulator.php:107
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: wpemulator.php:119
+msgid "Supprimer"
+msgstr "Supprimer"
+
+#: wpemulator.php:183
+msgid "Téléverser"
+msgstr "Téléverser"
+
+#: wpemulator.php:180
+msgid "Téléverser un jeu"
+msgstr "Téléverser un jeu"
+
+#: wpemulator.php:207
+msgid ""
+"Voici la liste complète des systèmes supportés par le plugin, avec leurs "
+"extensions de fichiers :"
+msgstr ""
+"Voici la liste complète des systèmes supportés par le plugin, avec leurs "
+"extensions de fichiers :"
+
+#. Name of the plugin
+msgid "WP Emulator"
+msgstr ""
+
+#: wpemulator.php:119
+msgid "Êtes-vous sûr de vouloir supprimer ce fichier ?"
+msgstr "Êtes-vous sûr de vouloir supprimer ce fichier ?"
