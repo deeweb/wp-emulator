@@ -1,6 +1,6 @@
 <?php
 	/*
-		Plugin Name:       Emulator
+		Plugin Name:       WP Emulator
 		Description:       Easily integrate an emulator into your WordPress site.
 		Version:           1.0
 		Author:            deeweb
@@ -33,8 +33,8 @@
 	// Ajoute les sous-menus pour le plugin
 	function wpemulator_admin_menu() {
 		add_menu_page(
-        'Emulator',
-        'Emulator',
+        'WP Emulator',
+        'WP Emulator',
         'manage_options',
         'wpemulator',
         'wpemulator_main_page',
@@ -49,7 +49,7 @@
 		$current_tab = isset($_GET['tab']) ? $_GET['tab'] : 'list';
 	?>
     <div class="wrap">
-        <h1>Emulator</h1>
+        <h1>WP Emulator</h1>
         <h2 class="nav-tab-wrapper">
             <a href="?page=wpemulator&tab=list" class="nav-tab <?php echo $current_tab === 'list' ? 'nav-tab-active' : ''; ?>">Liste des jeux</a>
             <a href="?page=wpemulator&tab=upload" class="nav-tab <?php echo $current_tab === 'upload' ? 'nav-tab-active' : ''; ?>">Envoyer un jeu</a>

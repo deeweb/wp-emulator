@@ -1,7 +1,7 @@
-# WordPress Plugin - Emulator
+# WordPress Plugin - WP Emulator
 
 ## Description
-This plugin allows you to upload retro gaming ROMs and launch an emulator directly from your WordPress site.
+This plugin allows you to upload retro gaming ROMs and launch them in an emulator directly from your WordPress site.
 
 > [!NOTE]
 > Works with [**EmulatorJS**](https://github.com/EmulatorJS/EmulatorJS)
@@ -34,10 +34,10 @@ This plugin allows you to upload retro gaming ROMs and launch an emulator direct
 
 After activation, you’ll find a new option in the WordPress admin menu.
 
-# Plugin WordPress - Emulateur
+# Plugin WordPress - WP Emulator
 
 ## Description
-Ce plugin permet d'uploader des roms de jeux rétrogaming et de lancer un émulateur directement depuis le site WordPress. 
+Ce plugin permet d'uploader des roms de jeux rétrogaming et de les lancer dans un émulateur directement depuis votre site WordPress. 
 
 > [!NOTE]
 > Fonctionne avec [**EmulatorJS**](https://github.com/EmulatorJS/EmulatorJS)
