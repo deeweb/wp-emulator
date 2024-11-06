@@ -70,7 +70,9 @@ Ce plugin permet d'uploader des roms de jeux rétrogaming et de lancer un émula
 
 Après l'activation, vous trouverez une nouvelle option dans le menu d'administration de WordPress.
 
-
+![Screenshot](docs/screenshot1.png)
+![Screenshot](docs/screenshot2.png)
+![Screenshot](docs/screenshot3.png)
 <img width = 300 src = docs/screenshot1.png> 
 <img width = 300 src = docs/screenshot2.png> 
 <img width = 300 src = docs/screenshot3.png> 
