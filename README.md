@@ -73,6 +73,3 @@ Après l'activation, vous trouverez une nouvelle option dans le menu d'administr
 ![Screenshot](docs/screenshot1.png)
 ![Screenshot](docs/screenshot2.png)
 ![Screenshot](docs/screenshot3.png)
-<img width = 300 src = docs/screenshot1.png> 
-<img width = 300 src = docs/screenshot2.png> 
-<img width = 300 src = docs/screenshot3.png> 
