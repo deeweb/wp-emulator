@@ -1,0 +1,34 @@
+/* wpemulator.css */
+
+.wpemulator-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.wpemulator-table th, .wpemulator-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.wpemulator-table th {
+    background-color: #f4f4f4;
+    text-align: left;
+}
+.wpemulator-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.wpemulator-table tr:hover {
+    background-color: #f1f1f1;
+}
+.wpemulator-table td code {
+    background-color: #f9f9f9;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+.button-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+}
+.button-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
