@@ -1,14 +1,26 @@
 <?php
 	/**
 		* Plugin Name: WP Emulator
-		* Description: Easily integrate an emulator into your WordPress site.
-		* Version: 1.0
+		* Description: Intégrez facilement un émulateur à votre site WordPress.
+		* Version: 1.2
 		* Author: deeweb
 		* Author URI: https://deeweb.fr/
 		*
 		* Text Domain: wpemulator
+		* Domain Path: languages
 	*/
 	
+	function wpemulator_load_textdomain() {
+		// Load translations from the languages directory.
+		$locale = get_locale();
+		
+		// This filter is documented in /wp-includes/l10n.php.
+		$locale = apply_filters( 'plugin_locale', $locale, 'wpemulator' ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals
+		load_textdomain( 'wpemulator', WP_LANG_DIR . '/plugins/wpemulator-' . $locale . '.mo' );
+		
+		load_plugin_textdomain( 'wpemulator', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+	}
+	add_action( 'plugins_loaded', 'wpemulator_load_textdomain' );
 	
 	// Crée le dossier wpemulator dans wp-content lors de l'activation du plugin
 	function wpemulator_create_folder() {
@@ -52,9 +64,9 @@
     <div class="wrap">
         <h1>WP Emulator</h1>
         <h2 class="nav-tab-wrapper">
-            <a href="?page=wpemulator&tab=list" class="nav-tab <?php echo $current_tab === 'list' ? 'nav-tab-active' : ''; ?>">Liste des jeux</a>
-            <a href="?page=wpemulator&tab=upload" class="nav-tab <?php echo $current_tab === 'upload' ? 'nav-tab-active' : ''; ?>">Envoyer un jeu</a>
-            <a href="?page=wpemulator&tab=help" class="nav-tab <?php echo $current_tab === 'help' ? 'nav-tab-active' : ''; ?>">Aide</a>
+            <a href="?page=wpemulator&tab=list" class="nav-tab <?php echo $current_tab === 'list' ? 'nav-tab-active' : ''; ?>"><?php _e('Liste des jeux' , 'wpemulator'); ?></a>
+            <a href="?page=wpemulator&tab=upload" class="nav-tab <?php echo $current_tab === 'upload' ? 'nav-tab-active' : ''; ?>"><?php _e('Envoyer un jeu' , 'wpemulator'); ?></a>
+            <a href="?page=wpemulator&tab=help" class="nav-tab <?php echo $current_tab === 'help' ? 'nav-tab-active' : ''; ?>"><?php _e('Aide' , 'wpemulator'); ?></a>
 		</h2>
         <?php
 			switch ($current_tab) {
@@ -87,13 +99,13 @@
 		$stored_titles = get_option('wpemulator_game_titles', array());
 	?>
     <div class="wrap">
-        <h3>Liste des jeux</h3>
+        <h3><?php _e('Liste des jeux' , 'wpemulator'); ?></h3>
         <table class="wpemulator-table">
             <thead>
                 <tr>
-                    <th>Nom du jeu</th>
-                    <th>Shortcode</th>
-                    <th>Action</th>
+                    <th><?php _e('Nom du jeu' , 'wpemulator'); ?></th>
+                    <th><?php _e('Shortcode' , 'wpemulator'); ?></th>
+                    <th><?php _e('Action' , 'wpemulator'); ?></th>
 				</tr>
 			</thead>
             <tbody>
@@ -104,7 +116,7 @@
                     <td>
                         <form method="post" style="display:inline-block;">
                             <input type="hidden" name="wpemulator_delete_game" value="<?php echo esc_attr($file); ?>">
-                            <input type="submit" value="Supprimer" class="button button-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce fichier ?');">
+                            <input type="submit" value="<?php _e('Supprimer' , 'wpemulator'); ?>" class="button button-danger" onclick="return confirm('<?php _e('Êtes-vous sûr de vouloir supprimer ce fichier ?' , 'wpemulator'); ?>');">
 						</form>
 					</td>
 				</tr>
@@ -165,10 +177,10 @@
 		}
 	?>
     <div class="wrap">
-        <h3>Téléverser un jeu</h3>
+        <h3><?php _e('Téléverser un jeu' , 'wpemulator'); ?></h3>
         <form method="post" enctype="multipart/form-data">
             <input type="file" name="wpemulator_file" accept=".zip,.smc,.sfc,.fig,.swc,.bs,.st,.gba,.gb,.gbc,.dmg,.fds,.nes,.unif,.unf,.vb,.vboy,.nds,.n64,.z64,.v64,.u1,.ndd,.sms,.smd,.md,.gg,.pbp,.chd" required>
-            <input type="submit" value="Téléverser" class="button button-primary">
+            <input type="submit" value="<?php _e('Téléverser' , 'wpemulator'); ?>" class="button button-primary">
 		</form>
 	</div>
     <?php
@@ -191,8 +203,8 @@
 		);
 	?>
     <div class="wrap">
-        <h3>Aide</h3>
-        <p>Voici la liste complète des systèmes supportés par le plugin, avec leurs extensions de fichiers :</p>
+        <h3><?php _e('Aide' , 'wpemulator'); ?></h3>
+        <p><?php _e('Voici la liste complète des systèmes supportés par le plugin, avec leurs extensions de fichiers :' , 'wpemulator'); ?></p>
         <ul>
             <?php foreach ($systems_supported as $system => $extensions) : ?>
 			<li>
@@ -307,10 +319,10 @@
         EJS_player = "#game";
         EJS_core = "' . esc_js($core) . '";
         EJS_gameUrl = "' . esc_url(wp_upload_dir()['baseurl'] . '/wpemulator/' . esc_attr($game)) . '";
-        EJS_pathtodata = "' . esc_url(plugin_dir_url(__FILE__) . 'emulatorjs/') . '";
+        EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
         EJS_language = "af-FR";
         </script>
-        <script src="' . esc_url(plugin_dir_url(__FILE__) . 'emulatorjs/loader.js') . '"></script>';
+        <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>';
 	}
 	add_shortcode('wpemulator', 'wpemulator_shortcode');
 ?>
